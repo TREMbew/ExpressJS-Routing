@@ -10,12 +10,12 @@ const workingTimeRoute = require('./routes/workingTime');
 const app = express()
 
 //app.use(bodyParser.urlencoded({extended: false}))
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public', 'stylesheet')));
 
 let date = new Date();
 let day = date.getDay();
 let hours = date.getHours();
-if(day > 4  && hours > 0 && hours < 18){
+if(hours > 0 && hours < 18){
 app.use(homeRoute);
 app.use(servicesRoute);
 app.use(contactRoute);
