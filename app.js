@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path')
-//const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 const homeRoute = require('./routes/home');
 const servicesRoute = require('./routes/services');
@@ -9,13 +9,13 @@ const workingTimeRoute = require('./routes/workingTime');
 
 const app = express()
 
-//app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(express.static(path.join(__dirname, 'public', 'stylesheet')));
 
 let date = new Date();
 let day = date.getDay();
 let hours = date.getHours();
-if(hours > 0 && hours < 18){
+if( day < 6 && hours > 9 && hours < 20){
 app.use(homeRoute);
 app.use(servicesRoute);
 app.use(contactRoute);

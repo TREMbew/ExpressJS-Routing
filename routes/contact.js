@@ -3,7 +3,8 @@ const path = require('path');
 
 const router = express.Router();
 
-router.get('/contact', (req, res) => {
+router.use('/contact', (req, res, next) => {
+    console.log(req.body);
     res.sendFile(path.join(__dirname,'..', 'public', 'contact.html'))
 });
 module.exports = router;

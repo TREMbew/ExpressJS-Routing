@@ -1,45 +1,3 @@
-/*body {
-    padding: 0;
-    margin: 0;
-    font-family: sans-serif;
-}
-
-.main-header {
-    width: 100%;
-    height: 4.5rem;
-    background-color: #5ec0d1;
-    padding: 0 1.5rem;
-}
-
-.main-header-nav {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.main-header-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.main-header-list {
-    margin: 0 1rem;
-    padding: 0;
-}
-
-.main-header-list a {
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-.main-header-list a:hover,
-.main-header-list a:active,
-.main-header-list a.active {
-    color: #211f91;
-}*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 * {
     box-sizing: border-box;
@@ -50,7 +8,7 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #222;
     padding-bottom: 50px;
-    background-image: linear-gradient(120deg, #300b0c, #8d0f1a);
+    background-image: linear-gradient(120deg, #300b0c,#8b1a1a, #8d0f1a);
 }
 .container {
     max-width: 1200px;
@@ -65,26 +23,24 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    /*transition: all 0.3s ease-in-out;*/
 }
 .nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    /*transition: all 0.3s ease-in-out;*/
 }
 .nav ul {
     display: flex;
     list-style-type: none;
     align-items: center;
     justify-content: center;
+    font-size: 1.15rem;
 }
 .nav a {
     color: #fff;
     text-decoration: none;
     padding: 7px 15px;
-    /*transition: all 0.3s ease-in-out;*/
 }
 .nav.active {
     background-color: #fff;
@@ -101,7 +57,7 @@ body {
     color: #c0392b;
     font-weight: bold;
 }
-.hero {
+.car-image {
     background-image: url("https://images.unsplash.com/photo-1554744512-d6c603f27c54?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1200&q=80");
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,7 +72,7 @@ body {
     margin-bottom: 20px;
     z-index: -2;
 }
-.hero::before {
+.car-image::before {
     content: "";
     position: absolute;
     top: 0;
@@ -126,11 +82,11 @@ body {
     background-color: rgba(0, 0, 0, 0.6);
     z-index: -1;
 }
-.hero h1 {
+.car-image h1 {
     font-size: 45px;
     margin: -20px 0 20px;
 }
-.hero h4 {
+.car-image h4 {
     font-size: 24px;
     letter-spacing: 1px;
 }
@@ -158,131 +114,6 @@ body {
 }
 .footer{
     text-align: center;
-    margin: 6rem 0 0 4rem;
+    margin: 6rem 0 0 2rem;
     color: rgba(168, 168, 168, 0.945);
-    
-}
-/************CONTACT***********************/
-.contact-container{
-    margin-top: 5.7rem;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-}
-.left-col {
-    width: 45vw;
-    height: 100%;
-    background-image: url("https://images.pexels.com/photos/931018/pexels-photo-931018.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.right-col {
-    width: 50vw;
-    height: 100vh;
-    padding: 5rem 3.5rem;
-}
-.contact-container h1, label, button, .description {
-    font-family: "Open Sans", sans-serif;
-    font-weight: 400;
-    letter-spacing: 0.1rem;
-}
-
-.contact-container h1 {
-    color:#000000;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    letter-spacing: 0.5rem;
-    font-weight: 300;
-}
-
-.contact-container p {
-    color: #818386;
-    font-size: 0.9rem;
-    letter-spacing: 0.01rem;
-    width: 40vw;
-    margin: 0.25rem 0;
-}
-
-label, .description {
-    color: #818386;
-    text-transform: uppercase;
-    font-size: 0.625rem;
-}
-
-form {
-    width: 31.25rem;
-    margin-top: 2rem;
-    padding: 1rem 0;
-}
-
-input, textarea, label {
-    width: 40vw;
-    display: block;
-}
-
-.contact-container p, placeholder, input, textarea {
-    font-family: 'Helvetica Neue', sans-serif;
-}
-
-input::placeholder, textarea::placeholder {
-    color: #010712;
-}
-
-input, textarea {
-    color: #010712;
-    font-weight: 500;
-    background: #FCFDFD;
-    border: none;
-    border-bottom: 1px solid #818386;
-    padding: 0.5rem 0;
-    margin-bottom: 1rem;
-    outline: none;
-}
-
-textarea {
-    resize: none;
-}
-
-button {
-    text-transform: uppercase;
-    font-weight: 300;
-    background: #3B3636;
-    color: #FCFDFD;
-    width: 10rem;
-    height: 2.25rem;
-    border: none;
-    border-radius: 2px;
-    outline: none;
-    cursor: pointer;
-}
-
-input:hover, textarea:hover, button:hover {
-    opacity: 0.5;
-}
-
-button:active {
-    opacity: 0.8;
-}
-
-
-@media only screen and (max-width: 950px) {
-    .logo {
-        width: 8rem;
-    }
-    .contact-container h1 {
-        font-size: 1.75rem;
-    }
-    .contact-container p {
-        font-size: 0.7rem;
-    }
-    input, textarea, button {
-        font-size: 0.65rem;
-    }
-    .description {
-        font-size: 0.3rem;
-        margin-left: 0.4rem;
-    }
-    button {
-        width: 7rem;
-    }
 }
